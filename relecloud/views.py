@@ -5,3 +5,6 @@ import datetime
 def index(request):
     return render(request,'relecloud/index.html')
 
+def about(request):
+    date = datetime.datetime.now()
+    return render(request,'relecloud/about.html',{'date':date})
