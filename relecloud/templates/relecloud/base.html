@@ -7,24 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relecloud</title>
      <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css"> 
+     <link rel="stylesheet" href="{% static 'app.css' %}">
   
 </head>
 <body>
-    <style>
-        body{
-            background-color: aqua;
-        }
-        nav,ul,li,a{
-            text-decoration: none;
-            list-style: none;
-        }
-    </style>
-<nav><ul>
-    <li><a href="{% url 'index' %}">Home</a></li>
-    <li><a href="{% url 'about' %}">About</a></li>
-</ul></nav>
+   
+
+{% include 'includes/navbar.html' %}
     {% block content %}
     {% endblock %}
-    
+ {% include 'includes/footer.html' %}
 </body>
 </html>

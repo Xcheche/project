@@ -1,0 +1,12 @@
+    body{
+            background-color: gray;
+        }
+        nav,ul,li,a{
+            display: flex;
+
+            justify-content: space-evenly;
+            padding: 5px;
+            margin: 10px;
+            text-decoration: none;
+            list-style: none;
+        }

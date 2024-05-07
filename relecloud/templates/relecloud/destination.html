@@ -1,0 +1,29 @@
+{% extends 'relecloud/base.html' %}
+{% block content %}
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Slug</th>
+      <!-- Add more headers if needed -->
+    </tr>
+  </thead>
+  <tbody>
+    {% if destinations %}
+      {% for destination in destinations %}
+      <tr>
+        <td>{{ destination.name }}</td>
+        <td>{{ destination.description }}</td>
+        <td>{{ destination.slug }}</td>
+        <!-- Add more columns if needed -->
+      </tr>
+      {% endfor %}
+    {% else %}
+      <tr>
+        <td colspan="3">No destinations found.</td>
+      </tr>
+    {% endif %}
+  </tbody>
+</table>
+{% endblock content %}
